@@ -3,8 +3,13 @@ import pygame, random
 
 # Initialize pygame
 # TODO: call pygame.init()
+pygame.init()
 
 # Set display window
+WINDOW_WIDTH = 600
+WINDOW_HEIGHT = 6000
+display_surface = pygame.display.set_mode(WINDOW_WIDTH, WINDOW_HEIGHT)
+pygame.display.set_caption()
 # TODO: create a WINDOW_WIDTH variable and assign it a value of 600
 # TODO: create a WINDOW_HEIGHT variable and assign it a value of 600
 # TODO: create a display_surface variable and assign it from pygame.display.set_mode passing
@@ -12,10 +17,18 @@ import pygame, random
 # TODO: call pygame.display.set_caption() passing in "~~Snake~~"
 
 # Set FSP and clock
+FPS = 20
+pygame.time.Clock()
 # TODO: create a FPS variable and assign it a value of 20
 # TODO: create a clock variable and assign it a value of pygame.time.Clock()
 
 # Set game values
+SNAKE_SIZE = 20
+head_x  = WINDOW_WIDTH // 2
+head_y  = WINDOW_HEIGHT // 2 + 100
+snake_dx  = 0
+snake_dy = 0
+score = 0
 # TODO: create a SNAKE_SIZE variable and assign it a value of 20
 # TODO: create a head_x variable and assign it a value of WINDOW_WIDTH // 2
 # TODO: repeat for head_y and assign it a value of WINDOW_HEIGHT // 2 + 100
@@ -24,6 +37,9 @@ import pygame, random
 # TODO: create a score variable and assign it a value of 0
 
 # Set colors
+color = GREEN, RED, WHITE
+DARKGRENN (10, 50, 10)
+DARKRED (150, 0, 0)
 # TODO: create GREEN, RED and WHITE tuples for the colors.  Use Standard RGB settings for those
 # TODO: create a DARKGREEN tuple and set to (10, 50, 10)
 # TODO: create a DARKRED tuple and set to (150, 0, 0)
@@ -40,6 +56,8 @@ def create_text_and_rect(text, color, background_color, **locations):
     for location in locations.keys():
         if location == "center":
             rect.center = locations[location]
+        elif location  == "topleft":
+            rect.topleft = locations[location]
         # TODO: add an if condition for "topleft" similar to the if condition for "center"
     return text, rect
 
@@ -49,12 +67,16 @@ title_text, title_rect = create_text_and_rect("~~Snake~~", GREEN, DARKRED,
                                              center=(WINDOW_WIDTH // 2, WINDOW_HEIGHT // 2))
 
 # TODO: unpack the tuple from create_text_and_rect into a score_text and score_rect variable
+score_text, score_rect =  create_text_and_rect (text="score:" + str(score), color=Green,
+                                                background_color=DARKED, topleft=(10, 10))
 # TODO: text is "Score: " + str(score)
 # TODO: color is GREEN
 # TODO: background_color is DARKRED
 # TODO: locations are topleft=(10, 10)
 
 # TODO: unpack the tuple from create_text_and_rect into a game_over_text and game_over_rect variable
+game_over_text,  game_over_rect = create_text_and_rect (text="GAMEOVER", color=RED, background_color=DARKGREEN,
+                                                        center=(WINDOW_WIDTH // 2, WINDOW_HEIGHT // 2))
 # TODO: text is "GAMEOVER"
 # TODO: color is RED
 # TODO: background_color is DARKGREEN
@@ -106,11 +128,10 @@ def move_snake(event):
 
 def check_quit(event):
     global running
-    # TODO: if event is equal to pygame.QUIT  set running to false
+    # TODO: if event.type is equal to pygame.QUIT  set running to false
 
 
 def check_events():
-    global running
     # TODO: create a for loop events is the variable pygame.event.get() is the list
         # TODO: call check_quit(event)
         # TODO: call move_snake(event)
@@ -121,6 +142,7 @@ def handle_snake():
     global head_x
     global head_y
     global head_coord
+    global snake_dx, snake_dy
     # TODO: call body_coords.insert() method and pass in 0, head_coord
     # TODO: call body_coords.pop()
     # TODO: add snake_dx to head_x
