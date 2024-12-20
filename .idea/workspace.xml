@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b05dac1-4b2b-48f6-af99-4a223e06afaf" name="Changes" comment="initial commit">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snake.py" beforeDir="false" afterPath="$PROJECT_DIR$/snake.py" afterDir="false" />
     </list>
@@ -75,6 +74,13 @@
       <workItem from="1733839699263" duration="4195000" />
       <workItem from="1734011758352" duration="3077000" />
       <workItem from="1734016084087" duration="673000" />
+      <workItem from="1734357645275" duration="3456000" />
+      <workItem from="1734619283892" duration="2257000" />
+      <workItem from="1734704003087" duration="1098000" />
+      <workItem from="1734705139438" duration="27000" />
+      <workItem from="1734705208296" duration="138000" />
+      <workItem from="1734705720362" duration="75000" />
+      <workItem from="1734705812556" duration="317000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -84,7 +90,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733840536298</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1734357946872</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1734357946872</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,6 +109,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SEMESTER_1_JOG_PROJECT_Period6$snake.coverage" NAME="snake Coverage Results" MODIFIED="1733843872880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SEMESTER_1_JOG_PROJECT_Period6$snake.coverage" NAME="snake Coverage Results" MODIFIED="1734706112635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
